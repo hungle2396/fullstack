@@ -1,0 +1,14 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "Learning react.js, redux, mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fullstack"
+  ],
+  "author": "Hung Le",
+  "license": "ISC"
+}
