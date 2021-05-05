@@ -4,8 +4,8 @@
   "description": "Learning react.js, redux, mongoDB",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --open",
-    "dev": "webpack --config webpack.config.js",
+    "start": "node server.js --open",
+    "dev": "webpack --config webpack.config.js && node server.js --open",
     "build": "webpack --config webpack.prod.js"
   },
   "engines": {

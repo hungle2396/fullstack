@@ -8,13 +8,14 @@ module.exports = {
     //     main: "./src/ts/app.ts",
     //     vendor: "./src/ts/vendor.ts"
     // },
-    // entry: "./src/ts/app.ts" (without react)
-    entry: ["babel-polyfill", "./src/jsx/index.jsx"],
+    // entry: "./src/ts/app.ts" (without react),
+    // entry: path.resolve(__dirname, "./src/jsx/index.jsx"),
+    entry: path.resolve(__dirname, "src", "jsx", "index.jsx"),
     devtool: "eval-source-map",
     output: {
         // filename: "[name].bundle.js",
-        filename: "bundle.js",
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js"
     },
     devServer: {
         inline: true,
@@ -25,7 +26,9 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/, 
-                use: "babel-loader",
+                use: {
+                    loader: "babel-loader",
+                },
                 exclude: /node_modules/
             },
             {
